@@ -3,6 +3,9 @@
 ## What Is Color Ace?
 Color Ace is a color tool for front-end web developers.
 
+## Demo
+[Check it out here](https://color-ace.netlify.com/)
+
 ## Features
 - Built-in list of CSS colors, with names, hex and RGB values
 - One-click copying of hex, RGB, HSL, or CSS color name
@@ -11,6 +14,8 @@ Color Ace is a color tool for front-end web developers.
 - Save colors
 - One-click pasting of a hex color from the clipboard
 - Colors are saved in the web browser's Local Storage, so you can continue where you left off
+- CSS colors can be filtered by category (e.g. reds, greens, greys, etc.)
+- Generate random colors
 
 ## About
 Color Ace was written in 2019 by [Kevin Perry](https://k-perry.github.io/).  Technologies used: React, JavaScript, HTML, and CSS.
