@@ -6,7 +6,14 @@ import ReactTooltip from 'react-tooltip';
 export default class CSSColorsTable extends Component {
 	static propTypes = {
 		setColor: PropTypes.func.isRequired,
-		colors: PropTypes.array.isRequired
+		colors: PropTypes.array.isRequired,
+		onSort: PropTypes.func.isRequired
+	};
+
+	state = {
+		sortNameDir: -1,
+		sortHexDir: -1,
+		sortRGBDir: -1
 	};
 
 	onClick = (e) => {
@@ -25,9 +32,23 @@ export default class CSSColorsTable extends Component {
 			td = td.parentNode;
 		}
 		const text = td.innerText.trim();
-		// console.log('Copied', text);
 		copyToClipboard(text);
 		e.stopPropagation();
+	};
+
+	onSortName = () => {
+		this.props.onSort('name', this.state.sortNameDir);
+		this.setState({ sortNameDir: -this.state.sortNameDir });
+	};
+
+	onSortHex = () => {
+		this.props.onSort('hex', this.state.sortHexDir);
+		this.setState({ sortHexDir: -this.state.sortHexDir });
+	};
+
+	onSortRGB = () => {
+		this.props.onSort('rgb', this.state.sortRGBDir);
+		this.setState({ sortRGBDir: -this.state.sortRGBDir });
 	};
 
 	mapColorsToRows = (color, index) => {
@@ -69,14 +90,14 @@ export default class CSSColorsTable extends Component {
 				<table className="colors-table" style={{ width: '100%' }}>
 					<thead>
 						<tr>
-							<th onClick={this.sortName}>
+							<th onClick={this.onSortName}>
 								CSS Color Name <i className="fas fa-sort" />
 							</th>
 							<th>Preview</th>
-							<th onClick={this.sortHex}>
+							<th onClick={this.onSortHex}>
 								Hex <i className="fas fa-sort" />
 							</th>
-							<th onClick={this.sortRGB}>
+							<th onClick={this.onSortRGB}>
 								RGB <i className="fas fa-sort" />
 							</th>
 						</tr>

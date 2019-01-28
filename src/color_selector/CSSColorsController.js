@@ -35,10 +35,18 @@ export default class CSSColorsController extends Component {
 		}
 	};
 
+	onSort = (key, sortDir) => {
+		const colorsCopy = this.state.colors;
+		colorsCopy.sort((a, b) => {
+			return a[key].localeCompare(b[key]) * -sortDir;
+		});
+		this.setState({ colors: colorsCopy });
+	};
+
 	render() {
 		return (
 			<React.Fragment>
-				<CSSColorsTable colors={this.state.colors} setColor={this.props.setColor} />
+				<CSSColorsTable colors={this.state.colors} setColor={this.props.setColor} onSort={this.onSort} />
 				<CSSColorsFilters activeFilter={this.state.activeFilter} onFilter={this.onFilter} />
 			</React.Fragment>
 		);
