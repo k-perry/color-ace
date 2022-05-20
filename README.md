@@ -4,7 +4,7 @@
 Color Ace is a color tool for front-end web developers.
 
 ## Demo
-[Check it out here](https://color-ace.netlify.com/)
+[Check it out here](https://colorace.netlify.com/)
 
 ## Features
 - Built-in list of CSS colors, with names, hex and RGB values
