@@ -8,7 +8,7 @@ import ColorPreview from "./ColorPreview";
 import * as Utils from "../utils";
 import { Tooltip } from "react-tooltip";
 
-export default class extends Component {
+export default class CurrentColor extends Component {
     static propTypes = {
         onSave: PropTypes.func.isRequired,
     };
