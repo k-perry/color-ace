@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 import { isValidHexColor } from "../utils";
 
 export default class Hex extends Component {
@@ -99,7 +99,7 @@ export default class Hex extends Component {
                         {this.state.clipboardText}
                     </span>
                 </button>
-                <ReactTooltip effect="solid" />
+                <Tooltip effect="solid" />
             </div>
         );
     }

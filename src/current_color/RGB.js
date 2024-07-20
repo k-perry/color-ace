@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 function RGB(props) {
     return (
@@ -54,7 +54,7 @@ function RGB(props) {
             >
                 <i className="fas fa-copy" />
             </button>
-            <ReactTooltip effect="solid" />
+            <Tooltip effect="solid" />
         </div>
     );
 }

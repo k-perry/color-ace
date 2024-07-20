@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { copyToClipboard } from "../utils";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 export default class CSSColorsTable extends Component {
     static propTypes = {
@@ -122,7 +122,7 @@ export default class CSSColorsTable extends Component {
                         }
                     </tbody>
                 </table>
-                <ReactTooltip effect="solid" />
+                <Tooltip effect="solid" />
             </div>
         );
     }

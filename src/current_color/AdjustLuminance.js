@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 export default class AdjustLuminance extends Component {
     static propTypes = {
@@ -41,7 +41,7 @@ export default class AdjustLuminance extends Component {
                         );
                     })}
                 </div>
-                <ReactTooltip effect="solid" />
+                <Tooltip effect="solid" />
             </div>
         );
     }

@@ -6,7 +6,7 @@ import HSL from "./HSL";
 import AdjustLuminance from "./AdjustLuminance";
 import ColorPreview from "./ColorPreview";
 import * as Utils from "../utils";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 export default class extends Component {
     static propTypes = {
@@ -228,7 +228,7 @@ export default class extends Component {
                         </div>
                     </div>
                 </div>
-                <ReactTooltip effect="solid" />
+                <Tooltip effect="solid" />
             </div>
         );
     }
