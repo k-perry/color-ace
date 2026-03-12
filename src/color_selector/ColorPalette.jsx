@@ -7,6 +7,8 @@ export default class ColorPalette extends Component {
         setColor: PropTypes.func.isRequired,
     };
 
+    canvasRef = React.createRef();
+
     state = {
         canvas: null,
         ctx: null,
@@ -15,7 +17,7 @@ export default class ColorPalette extends Component {
     };
 
     componentDidMount() {
-        const canvas = this.refs.canvas;
+        const canvas = this.canvasRef.current;
         const ctx = canvas.getContext("2d");
         this.setState({ canvas: canvas });
         this.setState({ ctx: ctx });
@@ -88,7 +90,7 @@ export default class ColorPalette extends Component {
             <div>
                 <div style={{ width: "100%", height: "400px" }}>
                     <canvas
-                        ref="canvas"
+                        ref={this.canvasRef}
                         style={{ cursor: "crosshair" }}
                         onMouseMove={this.onCanvasMouseMove}
                         onMouseLeave={this.onCanvasMouseLeave}
